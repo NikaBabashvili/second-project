@@ -1,0 +1,166 @@
+#maincontent {
+    position: relative;
+    width: 800px;
+    height: 500px;
+    background-color: white;
+    left: 350px;
+    top: 100px;
+    border-radius: 30px;
+}
+
+p{font-family: roboto;}
+
+#title{
+    position: absolute;
+    top: 10px;
+    font-size: 45px;
+    left: 60px;
+    font-weight: 700;
+    cursor:default;
+    
+}
+
+#text1{
+    position: absolute;
+    width: 350px;
+    font-size: 16px;
+    top: 130px;
+    left: 60px;
+    cursor:default;
+    
+}
+
+#icon1{
+    scale: 0.4;
+    position: absolute;
+    top: 170px;
+    left:35px;
+}
+
+#icon2{
+    scale: 0.4;
+    position: absolute;
+    top: 210px;
+    left:35px;
+}
+
+#icon3{
+    scale: 0.4;
+    position: absolute;
+    top: 250px;
+    left:35px;
+}
+
+#verifytext1{
+position: absolute;
+left: 85px;
+top: 195px;
+cursor:default;
+}
+#verifytext2{
+position: absolute;
+left: 85px;
+top: 235px;
+cursor:default;
+}
+#verifytext3{
+position: absolute;
+left: 85px;
+top: 275px;
+cursor:default;
+}
+
+#inputfield{
+    position: absolute;
+    width: 350px;
+    height: 42px;
+    left: 60px;
+    top: 370px;
+    border-radius: 5px;
+    font-weight: 500;
+}
+
+#adress{
+    position: absolute;
+    left: 60px;
+    top: 330px;
+    font-weight: 700;
+    cursor:default;
+}
+#result{
+    position: absolute;
+    left: 270px;
+    top: 330px;
+    font-weight: 700;  
+    color:  hsl(4, 100%, 67%); 
+    cursor:default;
+}
+
+#subscribe{
+    position: absolute;
+    width:355px ;
+    height:47px;
+    left: 60px;
+    top: 430px;
+    border-radius: 5px;
+    background-color: black;
+    color: white;
+    cursor: pointer;
+}
+
+#ilustration{
+    position: absolute;
+    top:15px;
+    width: 345px;
+    height: 470px;
+    left: 450px;
+}
+
+#success{
+    position: absolute;
+    width: 400px;
+    height: 400px;
+    border-radius: 15px;
+    background-color: white;
+    left: 550px;
+   top: 170px;
+   border: 2px solid black;
+}
+
+#iconsuccess{
+    position: absolute;
+    scale: 0.8;
+    top: 15px;
+    left: 40px;
+    
+    
+}
+
+#thank{
+    position: absolute;
+    font-size: 45px;
+    font-weight: 700;
+    top: 65px;
+    left: 40px;
+}
+
+#sent{
+    position: absolute;
+    left: 43px;
+    top: 215px;
+    width: 300px;
+  
+
+}
+
+#dismiss{
+    position: absolute;
+    width: 300px;
+    height: 50px;
+    background-color: black;
+    color: white;
+    left: 40px;
+    top: 330px;
+    border-radius: 10px;
+    cursor: pointer;
+}

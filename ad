@@ -1,0 +1,194 @@
+/*
+
+const searchbtn = document.getElementById("searchicon");
+const bmwdiv = document.getElementById("bmw");
+const audidiv = document.getElementById("audi");
+const forddiv = document.getElementById("ford");
+const noresult = document.getElementById("noresult");
+const backbtn = document.getElementById("backbtn");
+const inputField = document.getElementById("input");
+const carcategory = document.getElementById("carcategory");
+const searchlist = document.getElementById('searchlist');
+const searchedcar = document.getElementById('searchedcar');
+
+
+
+const bmwmodels = ["m4", "m5", "m3", "bmw"];
+const audimodels = ["jemala", "audi"];
+
+searchedcar.style.visibility = "hidden";
+searchedcar.style.display = 'none';
+
+searchlist.style.visibility = "hidden";
+searchlist.style.display = "none";
+
+backbtn.style.visibility = "hidden";
+backbtn.style.display = "none";
+
+bmwdiv.style.visibility = 'visible';
+bmwdiv.style.display = 'block';
+
+audidiv.style.visibility = 'visible';
+audidiv.style.display = 'block';
+
+forddiv.style.visibility = 'visible';
+forddiv.style.display = 'block';
+
+const cardivs = [bmwdiv, audidiv, forddiv];
+
+
+
+
+
+function updateSearchedCar(input) {
+  const matchingCars = [];
+
+  inputField.addEventListener('input', function () {
+    const inputi = inputField.value.toLowerCase();
+    updateSearchedCar(inputi);
+    const matchingCars = [];
+  
+   
+    // Check if the input field is empty, and hide the searched car results if it is
+    if (inputi === "") {
+      searchedcar.style.visibility = "hidden";
+      searchedcar.style.display = 'none';
+      searchlist.style.visibility = "hidden";
+      searchlist.style.display = 'none';
+      
+    }
+  });
+
+  for (const carModel of bmwmodels) {
+    if (carModel.includes(input)) {
+      matchingCars.push(carModel);
+      
+    }
+  }
+
+  for (const carModel of audimodels) {
+    if (carModel.includes(input)) {
+      matchingCars.push(carModel);
+    }
+  }
+
+
+
+  if (matchingCars.length > 0) {
+    searchedcar.style.visibility = "visible";
+    searchedcar.style.display = 'block';
+    searchlist.style.visibility = "visible";
+    searchlist.style.display = "block";
+    searchedcar.innerHTML = matchingCars.join(', ');
+  } else {
+    searchlist.style.visibility = "hidden";
+    searchlist.style.display = "none";
+    searchedcar.style.visibility = "hidden";
+    searchedcar.style.display = 'none';
+  }
+}
+
+inputField.addEventListener('input', function () {
+  const inputi = inputField.value.toLowerCase();
+  updateSearchedCar(inputi);
+  
+  
+});
+
+
+
+searchbtn.addEventListener("click", function () {
+  const inputi = inputField.value.toLowerCase();
+
+  backbtn.style.visibility = "visible";
+  backbtn.style.display = "block";
+
+  if (bmwmodels.includes(inputi)) {
+    for (const div of cardivs) {
+      div.style.visibility = 'hidden';
+      div.style.display = 'none';
+    }
+    bmwdiv.style.visibility = 'visible';
+    bmwdiv.style.display = 'block';
+    bmwdiv.style.marginLeft = "590px";
+    noresult.innerHTML = 'მოძებნილი შედეგები: ' + inputi;
+  } else if (audimodels.includes(inputi)) {
+    for (const div of cardivs) {
+      div.style.visibility = 'hidden';
+      div.style.display = 'none';
+    }
+    audidiv.style.visibility = 'visible';
+    audidiv.style.display = 'block';
+    audidiv.style.marginLeft = "590px";
+    audidiv.style.marginBottom = "300px";
+    noresult.innerHTML = 'მოძებნილი შედეგები: ' + inputi;
+  } else if (inputi == "ford") {
+    for (const div of cardivs) {
+      div.style.visibility = 'hidden';
+      div.style.display = 'none';
+    }
+    forddiv.style.visibility = 'visible';
+    forddiv.style.display = 'block';
+    forddiv.style.marginLeft = "590px";
+    noresult.innerHTML = 'მოძებნილი შედეგები: ' + inputi;
+  } else {
+    noresult.innerHTML = 'ამ სახელწოდებით  არაფერი მოიძებნა  ';
+    noresult.style.color = 'red';
+  }
+});
+
+inputField.addEventListener("input", function () {
+  if (inputField.value === "") {
+    for (const div of cardivs) {
+      div.style.visibility = 'visible';
+      div.style.display = 'block';
+      div.style.marginLeft = "";
+      backbtn.style.visibility = "hidden";
+      backbtn.style.display = "none";
+    }
+    noresult.innerHTML = '';
+  }
+});
+
+backbtn.addEventListener("click", function () {
+  for (const div of cardivs) {
+    div.style.visibility = 'visible';
+    div.style.display = 'block';
+    div.style.marginLeft = "";
+    backbtn.style.visibility = "hidden";
+    backbtn.style.display = "none";
+  }
+  noresult.innerHTML = '';
+  inputField.value = '';
+});
+
+
+bmwdiv.addEventListener('mouseover', function(){
+bmwdiv.style.backgroundColor = 'red'
+}
+)
+
+bmwdiv.addEventListener("mouseleave", function(){
+  bmwdiv.style.backgroundColor = 'rgb(134, 213, 213)'
+}
+)
+audidiv.addEventListener('mouseover', function(){
+  audidiv.style.backgroundColor = 'red'
+  }
+  )
+  
+  audidiv.addEventListener("mouseleave", function(){
+    audidiv.style.backgroundColor = 'rgb(134, 213, 213)'
+  })
+
+  forddiv.addEventListener('mouseover', function(){
+    forddiv.style.backgroundColor = 'green'
+    }
+    )
+    
+    forddiv.addEventListener("mouseleave", function(){
+      forddiv.style.backgroundColor = 'rgb(134, 213, 213)'
+    })
+
+
+
